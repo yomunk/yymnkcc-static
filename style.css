@@ -1,0 +1,60 @@
+:root {
+  --sans: 'IBM Plex Sans', sans-serif;
+  --serif: 'Roboto Slab', serif;
+  --bg: #d8d8d8;
+  --text: #111;
+  --accent: #315d63;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+header h1 {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 400;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #444;
+}
