@@ -16,9 +16,10 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   line-height: 1.6;
   padding: 1rem;
+  overflow-x: hidden;
 }
 
 .grid-container {
@@ -28,6 +29,12 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 header h1 {
