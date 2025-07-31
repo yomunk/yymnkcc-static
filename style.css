@@ -16,8 +16,9 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--sans);
+  font-size: 1rem;
   line-height: 1.6;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .grid-container {
@@ -26,11 +27,12 @@ body {
   gap: 2rem;
   max-width: 800px;
   margin: auto;
+  padding: 1rem;
 }
 
 header h1 {
   font-family: var(--serif);
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   margin-bottom: 0.25rem;
 }
 
@@ -41,7 +43,8 @@ header .subtitle {
 }
 
 main p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
 }
 
 a {
@@ -57,4 +60,33 @@ a:hover {
 footer {
   font-size: 0.9rem;
   color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+footer a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  min-height: 44px;
+}
+
+/* Responsive tweaks for narrow screens */
+@media (max-width: 600px) {
+  .grid-container {
+    padding: 0.5rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer a {
+    margin-bottom: 0.25rem;
+  }
 }
